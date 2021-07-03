@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phiếu Số 56 - Bài 2</title>
+</head>
+
+<body>
+  <script language="javascript">
+
+    function tongtien() {
+      let x = parseFloat(document.nhap.km.value);
+      let y;
+      if (x < 0)
+        alert("Nhập sai !");
+      else if (x < 1)
+        y = x * 15000;
+      else if (x < 6)
+        y = 15000 + (x - 1) * 12000;
+      else if (x > 140)
+        y = (15000 + 5 * 12000 + (x - 6) * 90000) * 0.88;
+      else y = (15000 + 5 * 12000 + (x - 6) * 90000);
+      document.nhap.kq.value = y;
+    }
+  </script>
+
+  <form name="nhap">
+    <table border="1" cellpadding="0" cellspacing="0" align="center" style="background-color: #ADD8E6; padding: 3px;">
+      <tr>
+        <th colspan="2"> Chương trình tính tiền taxi </th>
+      </tr>
+      <td colspan="1" align="left">Số km đã đi được </td>
+      <td colspan="1" align="center"><input type="text" name="km" /></td>
+      <tr>
+        <td colspan="1" align="left">Tiền thanh toán </td>
+        <td colspan="1" align="center"><input type="text" name="kq" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="reset" value="Xóa" />
+          <input type="button" value="Tính tiền" onclick="tongtien();" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

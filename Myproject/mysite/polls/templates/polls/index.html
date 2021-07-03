@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+    <h1>Template</h1>
+    <h4>
+        Chào các bạn mình là <i> {{name}} </i>
+    </h4>
+    <h2>Tài sản của mình gồm có:</h2>
+    <ul>
+        {% for i in item %}
+            {% if i != "Điện thoại" %}
+                <li>
+                    {{i}}
+                </li>
+            {%endif%}
+        {% endfor %}
+    </ul>
+{% endblock %}
