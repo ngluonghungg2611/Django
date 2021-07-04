@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
-def index(request):
-    myname = "Sol Nguyen"
-    lst = ["Điện thoại", "Laptop", "Bàn phím", "Tivi"]
-    context = {"name": myname, "item": lst}
-    return render(request,"polls/index.html", context)
-
+def Bai1(request):
+    return render(request, 'polls/Bai1.html')
+def Bai2(request):
+    return render(request, 'polls/Bai2.html')
+def Bai3(request):
+    return render(request, 'polls/Bai3.html')
